@@ -1,0 +1,31 @@
+#k Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
+
+# accustomed development
+alias py=python2
+alias python=python3
+# alias 命令动态切切换jdk版本
+alias jdk11="export JAVA_HOME=$JAVA_11_HOME"
+alias jdk8="export JAVA_HOME=$JAVA_8_HOME"
+alias ctags="/usr/local/bin/ctags"
+alias code="cd ~/code"
+alias park="cd ~/code/park"
+alias pr="cd ~/code/project"
+
+
+# shortcuts
+alias bp="vim ~/.bash_profile"
+alias bpr="source ~/.bash_profile"
+alias vir="vim ~/.vimrc"
+#alias vbs="vim ~/.vimBase"
+#alias venv="vim ~/.vimEnv"
+#alias vplug="vim ~/.vimPlug"
+alias vimb="vim ~/.vim_liuyf/basic.vim"
+alias vimp="vim ~/.vim_liuyf/plug.vim"
+alias kpt="ssh-copy-id -i ~/.ssh/id_rsa.pub" 
+alias cl="clear"

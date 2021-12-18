@@ -1,3 +1,7 @@
+#
+#  liuyf90's aliases 
+#
+#
 #Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -12,6 +16,7 @@ alias python=python3
 alias jdk11="export JAVA_HOME=$JAVA_11_HOME"
 alias jdk8="export JAVA_HOME=$JAVA_8_HOME"
 alias ctags="/usr/local/bin/ctags"
+alias mysqlto="mysql -P 3306 -h 127.0.0.1 -u root -p123456"
  
 # Common directory
 alias code="cd ~/code"
@@ -32,4 +37,7 @@ alias vimp="vim ~/.vim_liuyf/plug.vim"
 alias keyto="ssh-copy-id -i ~/.ssh/id_rsa.pub" 
 alias cl="clear"
 alias llh="ll -al"
-
+ #only show dir list
+alias ld="ls -d -al */"
+ #set p10k
+alias p10k="p10k configure"

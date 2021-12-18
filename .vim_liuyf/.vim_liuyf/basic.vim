@@ -106,3 +106,41 @@ nnoremap <Leader>gt :YcmCompleter GoTo<CR>
 nnoremap <Leader>gd :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>gh :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>gr :YcmCompleter GoToReferences<CR>
+    "so when enabling Java support, please manually disable Syntastic Java diagnostics.
+let g:syntastic_java_checkers = []
+    " so when enabling Java support, please manually disable Eclim Java diagnostics.
+let g:EclimFileTypeValidate = 0     
+    " 弹出提示，语义补全
+let g:ycm_key_invoke_completion = '<c-f>'
+let g:ycm_add_preview_to_completeopt = 0
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_server_log_level = 'info'
+let g:ycm_min_num_identifier_candidate_chars = 2
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_complete_in_strings=1
+
+    "隐藏函数原型预览窗口
+"set completeopt=menu,menuone
+"let g:ycm_add_preview_to_completeopt = 0
+
+let g:ycm_semantic_triggers =  {
+  \   'c' : ['->', '.'],
+  \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+  \             're!\[.*\]\s'],
+  \   'ocaml' : ['.', '#'],
+  \   'cpp,objcpp' : ['->', '.', '::'],
+  \   'perl' : ['->'],
+  \   'php' : ['->', '::'],
+  \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+  \   'ruby' : ['.', '::'],
+  \   'lua' : ['.', ':'],
+  \   'erlang' : [':'],
+  \ }
+
+noremap <c-f> <NOP>
+
+let g:ycm_semantic_triggers =  {
+			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
+			\ 'cs,lua,javascript': ['re!\w{2}'],
+			\ }
+    "g:ycm_filetype_whitelist 这个白名单，避免编辑白名单外的文件类型时 YCM也在那分析半天

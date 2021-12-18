@@ -46,6 +46,11 @@ complete -W "NSGlobalDomain" defaults;
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes
 SystemUIServer Terminal Twitter" killall;
 
+
+# set HISTTIMEFORMAT will show timestamp in the history
+export HISTTIMEFORMAT='%F %T    ';
+
+
 ## >>> conda initialize >>>
 ## !! Contents within this block are managed by 'conda init' !!
 # __conda_setup="$('/Users/liuyf/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -61,3 +66,4 @@ SystemUIServer Terminal Twitter" killall;
 #    unset __conda_setup
 #  # <<< conda initialize <<<
    
+

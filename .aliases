@@ -17,11 +17,14 @@ alias jdk11="export JAVA_HOME=$JAVA_11_HOME"
 alias jdk8="export JAVA_HOME=$JAVA_8_HOME"
 alias ctags="/usr/local/bin/ctags"
 
-#alias mysqlto="mysql -P 3306 -h 127.0.0.1 -u root -p123456"
-#mysqlto 进入到本机mysql中
+    #alias mysqlto="mysql -P 3306 -h 127.0.0.1 -u root -p123456"
+    #mysqlto 进入到本机mysql中
 alias mysqlto="mysql --defaults-extra-file=~/.my.cnf"
-#mysqle 直接执行本机mysql
+    #mysqle 直接执行本机mysql
 alias mysqle="mysql --defaults-extra-file=~/.my.cnf -e "
+    #tmux new  session
+alias tmuxn="tmux new -s "
+
  
 # Common directory
 alias code="cd ~/code"

@@ -19,9 +19,14 @@ alias ctags="/usr/local/bin/ctags"
 
     #alias mysqlto="mysql -P 3306 -h 127.0.0.1 -u root -p123456"
     #mysqlto 进入到本机mysql中
-alias mysqlto="mysql --defaults-extra-file=~/.my.cnf"
+#alias mysqlto="mysql --defaults-extra-file=~/.mysqlcnf/.local.cnf"
+#通过该脚本，选择一个mysql数据库，直接进入数据中。并且同时设置好MYSQLC变量为所选配置需要注意的是：采用source来执行脚本，如果用shell执行，会在子shell中执行，环境变量无法替换
+alias mysqlto=". selmysql.sh"
     #mysqle 直接执行本机mysql
-alias mysqle="mysql --defaults-extra-file=~/.my.cnf -e "
+    #由MYSQLC变量，配置mysqle命令进入哪个mysql服务中
+#MYSQLC=".local.cnf"
+alias mysqle="mysql --defaults-extra-file=~/.mysqlcnf/$MYSQLC -e "
+alias mysqlf="mysql --defaults-extra-file=~/.mysqlcnf/$MYSQLC  "
     #tmux new  session
 alias tmuxn="tmux new -s "
 
@@ -49,8 +54,7 @@ alias llh="ll -al"
 alias ld="ls -d -al */"
  #set p10k
 alias p10k="p10k configure"
+alias today='date +"%A, %B %-d, %Y"'
 
 
 
-
-MYSQL_HOSTNAME="127.0.0.1"

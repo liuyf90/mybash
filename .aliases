@@ -58,5 +58,7 @@ alias ld="ls -d -al */"
 alias p10k="p10k configure"
 alias today='date +"%A, %B %-d, %Y"'
 
+#shortcuts for cht.sh best cheat sheet tool
+alias cht="cht.sh "
 
 

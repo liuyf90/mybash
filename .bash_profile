@@ -3,6 +3,7 @@ export BASH_CONF="bash_profile"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/openresty/bin:$PATH"
 export PATH="/usr/local/openresty/nginx/sbin:$PATH"
+export PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:$PATH"
 export TOOL_HOME=/Users/liuyf/workspace/tools
 export JAVA_11_HOME=`/usr/libexec/java_home -v 11.0`
 export JAVA_8_HOME=`/usr/libexec/java_home -v 1.8.0_112`

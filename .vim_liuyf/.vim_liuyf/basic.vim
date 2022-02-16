@@ -100,25 +100,33 @@ nnoremap <leader><S-Tab> :tabprevious<CR>
 
 " YcmCompleter设置
 let g:ycm_global_ycm_extra_conf ='~/.vim/pack/my/start/YouCompleteMe/.ycm_extra_conf.py'
+" 增加这个设置，1 代表可以加载其他的配置文件
 let g:ycm_confirm_extra_conf = 0
+let g:syntastic_cpp_compiler = 'g++' "change the compiler to g++ to support c++11. 
+let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++' "set the options of g++ to suport c++11
+let g:ycm_error_symbol = '>>'
+let g:ycm_warning_symbol = '>*'
+let g:ycm_enable_diagnostic_signs = 0
+" 弹出提示，语义补全
+let g:ycm_key_invoke_completion = '<Leader>ac'
 nnoremap <Leader>fi :YcmCompleter FixIt<CR>
 nnoremap <Leader>gt :YcmCompleter GoTo<CR>
 nnoremap <Leader>gd :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>gh :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>gr :YcmCompleter GoToReferences<CR>
-    "so when enabling Java support, please manually disable Syntastic Java diagnostics.
-let g:syntastic_java_checkers = []
-    " so when enabling Java support, please manually disable Eclim Java diagnostics.
-let g:EclimFileTypeValidate = 0     
-    " 弹出提示，语义补全
-let g:ycm_key_invoke_completion = '<c-f>'
-let g:ycm_add_preview_to_completeopt = 0
-let g:ycm_show_diagnostics_ui = 0
-let g:ycm_server_log_level = 'info'
-let g:ycm_min_num_identifier_candidate_chars = 2
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-let g:ycm_complete_in_strings=1
-
+nnoremap <leader>dd :YcmCompleter GetDoc<CR>
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+ "so when enabling Java support, please manually disable Syntastic Java diagnostics.
+"let g:syntastic_java_checkers = []
+"    " so when enabling Java support, please manually disable Eclim Java diagnostics.
+"let g:EclimFileTypeValidate = 0     
+"let g:ycm_add_preview_to_completeopt = 0
+"let g:ycm_show_diagnostics_ui = 0
+"let g:ycm_server_log_level = 'info'
+"let g:ycm_min_num_identifier_candidate_chars = 2
+"let g:ycm_collect_identifiers_from_comments_and_strings = 1
+"let g:ycm_complete_in_strings=1
+"inoremap <c-o> <c-x><c-o>
     "隐藏函数原型预览窗口
 "set completeopt=menu,menuone
 "let g:ycm_add_preview_to_completeopt = 0
@@ -137,10 +145,17 @@ let g:ycm_semantic_triggers =  {
   \   'erlang' : [':'],
   \ }
 
-noremap <c-f> <NOP>
+"noremap <c-f> <NOP>
 
-let g:ycm_semantic_triggers =  {
-			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
-			\ 'cs,lua,javascript': ['re!\w{2}'],
-			\ }
-    "g:ycm_filetype_whitelist 这个白名单，避免编辑白名单外的文件类型时 YCM也在那分析半天
+"let g:ycm_semantic_triggers =  {
+"			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
+"			\ 'cs,lua,javascript': ['re!\w{2}'],
+"			\ }
+"    "g:ycm_filetype_whitelist 这个白名单，避免编辑白名单外的文件类型时 YCM也在那分析半天
+"    "
+"    "
+" 为 ultisnips 配置一些键映射
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger="<c-.>" 
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"

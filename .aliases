@@ -17,6 +17,7 @@ alias pip=pip3.7
 alias jdk11="export JAVA_HOME=$JAVA_11_HOME"
 alias jdk8="export JAVA_HOME=$JAVA_8_HOME"
 alias ctags="/usr/local/bin/ctags"
+alias finde="find -E "
 
     #alias mysqlto="mysql -P 3306 -h 127.0.0.1 -u root -p123456"
     #mysqlto 进入到本机mysql中
@@ -40,6 +41,7 @@ alias pr="cd ~/code/project"
 
 
 # Shortcuts
+alias vim="nvim "
 alias bp="vim ~/.bash_profile"
 alias bpr="source ~/.bash_profile"
 alias vir="vim ~/.vimrc"

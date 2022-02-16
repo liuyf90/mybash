@@ -6,6 +6,8 @@
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'davidhalter/jedi-vim'
- "   Plug 'python-mode/python-mode'
+ "Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
+    Plug 'python-mode/python-mode'
  call plug#end() 
  

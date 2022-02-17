@@ -100,9 +100,70 @@ nnoremap <leader><S-Tab> :tabprevious<CR>
 
 " YcmCompleter设置
 let g:ycm_global_ycm_extra_conf ='~/.vim/pack/my/start/YouCompleteMe/.ycm_extra_conf.py'
+" 增加这个设置，1 代表可以加载其他的配置文件
 let g:ycm_confirm_extra_conf = 0
+let g:syntastic_cpp_compiler = 'g++' "change the compiler to g++ to support c++11. 
+let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libc++' "set the options of g++ to suport c++11
+let g:ycm_error_symbol = '>>'
+let g:ycm_warning_symbol = '>*'
+"设置此选项后，YCM 将在具有诊断设置的行上的 Vim 的 gutter 中放置图标
+let g:ycm_enable_diagnostic_signs = 1
+"设置此选项后，YCM 将突出显示与行中出现的诊断相关的文本区域(如果有的话)。
+let g:ycm_enable_diagnostic_highlighting = 1
+
+let g:ycm_seed_identifiers_with_syntax = 0
+"当此选项设置为1时，YCM 将在用户接受提供的完成字符串后自动关闭预览窗口。
+let g:ycm_autoclose_preview_window_after_completion = 1
+"当此选项设置为1时，YCM 将在用户离开插入模式后自动关闭预览窗口
+let g:ycm_autoclose_preview_window_after_insertion = 1
+" 弹出提示，语义补全
+let g:ycm_key_invoke_completion = '<C-a>'
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
 nnoremap <Leader>fi :YcmCompleter FixIt<CR>
 nnoremap <Leader>gt :YcmCompleter GoTo<CR>
 nnoremap <Leader>gd :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>gh :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>gr :YcmCompleter GoToReferences<CR>
+nnoremap <leader>gb :YcmCompleter GetDoc<CR>
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+"inoremap <c-o> <c-x><c-o>
+ "隐藏函数原型预览窗口
+set completeopt=menu,menuone
+"当该选项设置为1时，YCM 将向 Vim 的 completeopt 选项添加预览字符串(参见: h completeopt)
+let g:ycm_add_preview_to_completeopt = 1
+
+let g:ycm_semantic_triggers =  {
+  \   'c' : ['->', '.'],
+  \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+  \             're!\[.*\]\s'],
+  \   'ocaml' : ['.', '#'],
+  \   'cpp,objcpp' : ['->', '.', '::'],
+  \   'perl' : ['->'],
+  \   'php' : ['->', '::'],
+  \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+  \   'ruby' : ['.', '::'],
+  \   'lua' : ['.', ':'],
+  \   'erlang' : [':'],
+  \ }
+
+"noremap <c-f> <NOP>
+
+"let g:ycm_semantic_triggers =  {
+"			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
+"			\ 'cs,lua,javascript': ['re!\w{2}'],
+"			\ }
+"    "g:ycm_filetype_whitelist 这个白名单，避免编辑白名单外的文件类型时 YCM也在那分析半天
+"    "
+"    "
+" 为 ultisnips 配置一些键映射
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger="<c-j>" 
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+" better key bindings for UltiSnipsExpandTrigger
+"let g:UltiSnipsExpandTrigger = "<tab>"
+"let g:UltiSnipsJumpForwardTrigger = "<tab>"
+"let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"

@@ -6,6 +6,8 @@
 "set nocompatible
 set history=200
 set scrolloff=5
+
+nnoremap <silent> <F3> :NERDTree<CR>
 "自动与上一行的缩进保持一致
 set autoindent
 "不创建备份文件
@@ -36,7 +38,7 @@ set incsearch
 "搜索忽略大小写
 set ignorecase
 " 设置折叠方式
-"set foldmethod=indent
+set foldmethod=marker
 " 自动高亮成对的括号
 set showmatch
 " 显示按钮
@@ -97,6 +99,10 @@ map <leader>sc :set spell!<CR>
 " 设置tab导航、多标签页导航
 nnoremap <leader><Tab> :tabnext<CR>
 nnoremap <leader><S-Tab> :tabprevious<CR>
+"配对的关键字间跳转
+set nocompatible
+filetype plugin on
+runtime macros/matchit.vim
 
 " YcmCompleter设置
 let g:ycm_global_ycm_extra_conf ='~/.vim/pack/my/start/YouCompleteMe/.ycm_extra_conf.py'
@@ -116,6 +122,8 @@ let g:ycm_seed_identifiers_with_syntax = 0
 let g:ycm_autoclose_preview_window_after_completion = 1
 "当此选项设置为1时，YCM 将在用户离开插入模式后自动关闭预览窗口
 let g:ycm_autoclose_preview_window_after_insertion = 1
+"设置为1时，YCM 的标识符完成程序将用您正在编写的编程语言的关键字为其标识符数据库提供种子
+let g:ycm_seed_identifiers_with_syntax = 1
 " 弹出提示，语义补全
 let g:ycm_key_invoke_completion = '<C-a>'
 " make YCM compatible with UltiSnips (using supertab)
@@ -125,7 +133,7 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 nnoremap <Leader>fi :YcmCompleter FixIt<CR>
 nnoremap <Leader>gt :YcmCompleter GoTo<CR>
 nnoremap <Leader>gd :YcmCompleter GoToDefinition<CR>
-nnoremap <Leader>gh :YcmCompleter GoToDeclaration<CR>
+nnoremap <Leader>gi :YcmCompleter GoToImplementation<CR>
 nnoremap <Leader>gr :YcmCompleter GoToReferences<CR>
 nnoremap <leader>gb :YcmCompleter GetDoc<CR>
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
@@ -163,7 +171,3 @@ let g:ycm_semantic_triggers =  {
 let g:UltiSnipsExpandTrigger="<c-j>" 
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-" better key bindings for UltiSnipsExpandTrigger
-"let g:UltiSnipsExpandTrigger = "<tab>"
-"let g:UltiSnipsJumpForwardTrigger = "<tab>"
-"let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"

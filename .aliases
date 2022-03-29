@@ -23,8 +23,9 @@ alias finde="find -E "
     #mysqlto 进入到本机mysql中
 #alias mysqlto="mysql --defaults-extra-file=~/.mysqlcnf/.local.cnf"
 #通过该脚本，选择一个mysql数据库，直接进入数据中。并且同时设置好MYSQLC变量为所选配置需要注意的是：采用source来执行脚本，如果用shell执行，会在子shell中执行，环境变量无法替换
-alias mysqlto=". selmysql.sh"
-alias myclito="mycli --defaults-file ~/.mysqlcnf/$MYSQLC "
+alias selmysql=". selmysql.sh"
+alias mt="mycli --defaults-file ~/.mysqlcnf/$MYSQLC "
+alias pt=" pgcli -h 10.211.55.6 -p 5432 -U postgres "
     #mysqle 直接执行本机mysql
     #由MYSQLC变量，配置mysqle命令进入哪个mysql服务中
 #MYSQLC=".local.cnf"
@@ -36,9 +37,9 @@ alias tmuxn="tmux new -s "
  
 # Common directory
 alias code="cd ~/code"
-alias park="cd ~/code/park"
-alias pr="cd ~/code/project"
-
+alias park="cd ~/code/02park"
+alias pr="cd ~/code/03project"
+alias 2022="cd ~/code/03project/2022"
 
 # Shortcuts
 alias vim="nvim "

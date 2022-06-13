@@ -40,6 +40,7 @@ alias code="cd ~/code"
 alias park="cd ~/code/02park"
 alias pr="cd ~/code/03project"
 alias 2022="cd ~/code/03project/2022"
+alias work="cd ~/StoreRoom/010workingSpace/01code"
 
 # Shortcuts
 alias vim="nvim "
@@ -63,5 +64,3 @@ alias today='date +"%A, %B %-d, %Y"'
 
 #shortcuts for cht.sh best cheat sheet tool
 alias cht="cht.sh "
-
-

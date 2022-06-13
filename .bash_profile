@@ -1,5 +1,6 @@
 #It sure bash_profile is itself that we shall use this the command "echo $BASH_CONF"
 export BASH_CONF="bash_profile"
+export OR="/usr/local/openresty"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/openresty/bin:$PATH"
 export PATH="/usr/local/openresty/nginx/sbin:$PATH"

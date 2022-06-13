@@ -14,6 +14,7 @@
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'camspiers/snap'
-    Plug 'mrjones2014/dash.nvim', { 'do': 'make install' }
+    "Plug 'mrjones2014/dash.nvim', { 'do': 'make install' }
+    Plug 'rizzatti/dash.vim'
  call plug#end() 
  

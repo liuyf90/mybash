@@ -171,3 +171,6 @@ let g:ycm_semantic_triggers =  {
 let g:UltiSnipsExpandTrigger="<c-j>" 
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+"insert dash's config
+nnoremap <leader>d :Dash<cr>

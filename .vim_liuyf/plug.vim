@@ -7,14 +7,26 @@
     Plug 'junegunn/fzf.vim'
     Plug 'davidhalter/jedi-vim'
     Plug 'SirVer/ultisnips'
+
+    Plug 'MarcWeber/vim-addon-mw-utils'
+    Plug 'tomtom/tlib_vim'
+    Plug 'garbas/vim-snipmate'
+
+  " Optional:
     Plug 'honza/vim-snippets'
+
     Plug 'vim-scripts/JavaDecompiler.vim'  
     Plug 'python-mode/python-mode'
     
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'camspiers/snap'
-    "Plug 'mrjones2014/dash.nvim', { 'do': 'make install' }
+
+    "dash
     Plug 'rizzatti/dash.vim'
+    "dict for mac 
+    Plug 'skywind3000/vim-quickui'
+    Plug 'xfyuan/vim-mac-dictionary'
+    Plug 'tpope/vim-rails'
  call plug#end() 
  

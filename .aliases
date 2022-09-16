@@ -10,7 +10,7 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
-# Accustomed development
+# Acustomed development
 alias py=python2
 alias python=python3
 alias pip=pip3.7
@@ -19,9 +19,6 @@ alias jdk8="export JAVA_HOME=$JAVA_8_HOME"
 alias ctags="/usr/local/bin/ctags"
 alias finde="find -E "
 
-    #alias mysqlto="mysql -P 3306 -h 127.0.0.1 -u root -p123456"
-    #mysqlto 进入到本机mysql中
-#alias mysqlto="mysql --defaults-extra-file=~/.mysqlcnf/.local.cnf"
 #通过该脚本，选择一个mysql数据库，直接进入数据中。并且同时设置好MYSQLC变量为所选配置需要注意的是：采用source来执行脚本，如果用shell执行，会在子shell中执行，环境变量无法替换
 alias selmysql=". selmysql.sh"
 alias mt="mycli --defaults-file ~/.mysqlcnf/$MYSQLC "
@@ -35,6 +32,19 @@ alias mysqlf="mysql --defaults-extra-file=~/.mysqlcnf/$MYSQLC  "
 alias tmuxn="tmux new -s "
 
  
+#servers
+alias start_redis="brew services start redis"
+alias start_redis="brew services stop redis"
+
+alias start_mongo="mongod --config /usr/local/etc/mongodb.config"
+alias mongo="mongosh"
+
+
+
+
+
+
+
 # Common directory
 alias code="cd ~/code"
 alias park="cd ~/code/02park"

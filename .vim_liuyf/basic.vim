@@ -7,6 +7,9 @@
 set history=200
 set scrolloff=5
 
+" VimScript
+autocmd BufRead,BufNewFile *.vim map <F5> :source %<CR>:echon "script reloaded!"<CR>
+
 nnoremap <silent> <F3> :NERDTree<CR>
 "自动与上一行的缩进保持一致
 set autoindent
@@ -85,6 +88,22 @@ nnoremap <silent> [b :bprevious<CR>
 nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
+" 窗口方向
+nnoremap <silent>gl <C-w>l<CR>
+nnoremap <silent>gh <C-w>h<CR>
+nnoremap <silent>gj <C-w>j<CR>
+nnoremap <silent>gk <C-w>k<CR>
+nnoremap <C-W>M <C-W>\| <C-W>_
+nnoremap <C-W>m <C-W>=
+" 窗口的宽度设为40，用于目录树之类的
+nnoremap <C-W>\| 40<C-W>\| 
+" 用方向键调整window大小
+nnoremap <Left> <C-w><lt>
+nnoremap <Right> <C-w>>
+nnoremap <Up> <C-w>-
+nnoremap <Down> <C-w>+
+
+nnoremap <silent><leader>wq :MacDictQuery<CR>
 "大写Q退出
 map Q :q<CR>
 " 使用前缀对应缓冲区
@@ -169,8 +188,20 @@ let g:ycm_semantic_triggers =  {
 " 为 ultisnips 配置一些键映射
 " better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger="<c-j>" 
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-f>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-
+let g:UltiSnipsEditSplit="vertical"
 "insert dash's config
 nnoremap <leader>d :Dash<cr>
+let g:dash_activate = 0
+let g:dash_map = {
+        \ 'java' : ['android', 'java'],
+        \ 'lua' : ['openresty', 'lua']
+        \ }
+"set dict
+nnoremap <silent><leader>ww :MacDictPopup<CR>
+nnoremap <silent><leader>wd :MacDictWord<CR>
+nnoremap <silent><leader>wq :MacDictQuery<CR>
+
+
+"let g:snipMate.scope_aliases['ruby'] = 'ruby,rails'

@@ -205,3 +205,9 @@ nnoremap <silent><leader>wq :MacDictQuery<CR>
 
 
 "let g:snipMate.scope_aliases['ruby'] = 'ruby,rails'
+"
+"rails plugin config
+nnoremap <silent><leader>m :Emodel 
+nnoremap <silent><leader>c :Econtroller 
+nnoremap <silent><leader>s :Eview
+nnoremap <silent><leader>t :Efunctionaltest

@@ -3,6 +3,15 @@
 
 source ~/.vim_liuyf/basic.vim
 source ~/.vim_liuyf/plug.vim
+
+lua << EOF
+require'lspconfig'.solargraph.setup{}
+require'lspconfig'.tsserver.setup{}
+require'lspconfig'.gopls.setup{}
+EOF
+
+lua require('lspfuzzy').setup {}
+
 "set runtimepath+=~/.vim_runtime
 "
 "source ~/.vim_runtime/vimrcs/basic.vim

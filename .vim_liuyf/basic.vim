@@ -6,6 +6,7 @@
 "set nocompatible
 set history=200
 set scrolloff=5
+    
 
 " VimScript
 autocmd BufRead,BufNewFile *.vim map <F5> :source %<CR>:echon "script reloaded!"<CR>
@@ -206,8 +207,35 @@ nnoremap <silent><leader>wq :MacDictQuery<CR>
 
 "let g:snipMate.scope_aliases['ruby'] = 'ruby,rails'
 "
-"rails plugin config
+"
 nnoremap <silent><leader>m :Emodel 
 nnoremap <silent><leader>c :Econtroller 
 nnoremap <silent><leader>s :Eview
 nnoremap <silent><leader>t :Efunctionaltest
+
+
+"设置当ruby文件时设置缩进为2个空格
+autocmd FileType ruby setlocal et sta sw=2 sts=2
+
+
+"查找当前焦点单词
+nnoremap <silent><leader>f /<c-r><c-w><CR>
+
+autocmd BufRead,BufNewFile conf.d/* setfiletype conf
+
+
+au BufRead,BufNewFile *.nginx set ft=nginx
+au BufRead,BufNewFile */etc/nginx/* set ft=nginx
+au BufRead,BufNewFile */conf.d/* set ft=nginx
+au BufRead,BufNewFile */usr/local/nginx/conf/* set ft=nginx
+au BufRead,BufNewFile nginx.conf set ft=nginx
+
+
+
+" 启用 man 插件
+source $VIMRUNTIME/ftplugin/man.vim
+set keywordprg=:Man
+
+
+tnoremap <Esc><Esc>       <C-\><C-N>
+tnoremap <C-V><Esc> <Esc>

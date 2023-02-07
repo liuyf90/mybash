@@ -5,20 +5,64 @@ return require('packer').startup(function()
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 	-- Lsp config
-	use {
-		'williamboman/nvim-lsp-installer',
-		config = function()
-			require('conf.nvim-lsp-installer-conf')
-		end
-	}
-	use 'neovim/nvim-lspconfig'
-	use 'hrsh7th/nvim-cmp'
+    use {
+     "williamboman/nvim-lsp-installer",
+     config = function()
+         require("nvim-lsp-installer").setup {
+             automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
+             ui = {
+                 icons = {
+                     server_installed = "✓",
+                     server_pending = "➜",
+                     server_uninstalled = "✗"
+                 }
+             }
+         }
+     end
+    }
+--    use 'neovim/nvim-lspconfig'
+    use {
+        'neovim/nvim-lspconfig',
+--        require'lspconfig'.solargraph.setup{
+--            on_attach = on_attach,
+--            flags = lsp_flags,
+--            opts = { noremap=true, silent=true },
+--            root_dir = function() return vim.loop.cwd()
+--            end
+ --       }
+    }
 	use 'hrsh7th/cmp-nvim-lsp'
-	use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-	use 'L3MON4D3/LuaSnip' -- Snippets plugin
+    use { 'L3MON4D3/LuaSnip' }
+    use {
+        'hrsh7th/nvim-cmp',
+        config = function ()
+            require'cmp'.setup {
+                snippet = {
+                    expand = function(args)
+                        require'luasnip'.lsp_expand(args.body)
+                    end
+                },
+
+                sources = {
+                    { name = 'luasnip_choice' },
+                    -- more sources
+                },
+            }
+        end
+    }
+    use {
+        'doxnit/cmp-luasnip-choice',
+        config = function()
+            require('cmp_luasnip_choice').setup({
+                auto_open = true, -- Automatically open nvim-cmp on choice node (default: true)
+            });
+        end,
+    }
+    use { 'saadparwaiz1/cmp_luasnip' }
 	use 'hrsh7th/cmp-buffer'
 	use 'hrsh7th/cmp-path'
 	use 'hrsh7th/cmp-nvim-lua'
+
 	-- Markdown Preview
 	use 'iamcco/markdown-preview.nvim'
 
@@ -80,38 +124,6 @@ use {
 	end
 }
 
-use({
-	'NTBBloodbath/doom-one.nvim',
-	config = function()
-		require('doom-one').setup({
-			cursor_coloring = false,
-			terminal_colors = false,
-			italic_comments = false,
-			enable_treesitter = true,
-			transparent_background = false,
-			pumblend = {
-				enable = true,
-				transparency_amount = 20,
-			},
-			plugins_integrations = {
-				neorg = true,
-				barbar = true,
-				bufferline = false,
-				gitgutter = false,
-				gitsigns = true,
-				telescope = false,
-				neogit = true,
-				nvim_tree = true,
-				dashboard = true,
-				startify = true,
-				whichkey = true,
-				indent_blankline = true,
-				vim_illuminate = true,
-				lspsaga = false,
-			},
-		})
-	end,
-})
 
 use {
 	'nvim-telescope/telescope.nvim',
@@ -127,5 +139,20 @@ use {
 --moonfly is a dark charcoal theme for classic Vim & modern Neovim.
 use  {"bluz71/vim-moonfly-colors", as= "moonfly" }
 
-
+use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
+})
+use {
+  'ojroques/nvim-lspfuzzy',
+  requires = {
+    {'junegunn/fzf'},
+    {'junegunn/fzf.vim'},  -- to enable preview (optional)
+  },
+}
 end)

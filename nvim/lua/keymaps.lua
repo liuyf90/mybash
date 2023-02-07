@@ -6,6 +6,8 @@ function map(mode, lhs, rhs, opts)
     end
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
+-- use , as a the leader key
+vim.g.mapleader = ','
 
 map("n", ",<Space>", ":nohlsearch<CR>", { silent = true })
 --缓冲区导航映射
@@ -31,7 +33,15 @@ map("n", "<Up>", "<C-w>-", {silent = true})
 map("n", "<Down>", "<C-w>+", {silent = true})
 
 --应用前缀对应缓冲区
-map("n", "<leader>1", ":1b", {silent = true})
-map("n", "<leader>2", ":2b", {silent = true})
-map("n", "<leader>3", ":3b", {silent = true})
+map("n", "<leader>1", ":1b<CR>", {silent = true})
+map("n", "<leader>2", ":2b<CR>", {silent = true})
+map("n", "<leader>3", ":3b<CR>", {silent = true})
+
+--打开nvim tree
+map("n", "<leader>to", ":NvimTreeOpen<CR>", {silent = true})
+map("n", "<leader>tc", ":NvimTreeClose<CR>", {silent = true})
+
+
+
+
 

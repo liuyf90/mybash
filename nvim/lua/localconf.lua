@@ -19,3 +19,4 @@ vim.cmd('autocmd vimenter *.md exec ":MarkdownPreview"')
 
 -- colorscheme moonfly
 vim.cmd [[colorscheme moonfly]]
+

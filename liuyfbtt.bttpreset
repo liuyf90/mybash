@@ -1,0 +1,268 @@
+{
+  "BTTPresetCreatorNotes" : "",
+  "BTTPresetInfoURL" : "",
+  "BTTPresetName" : "liuyfbtt",
+  "BTTPresetColor" : "4.947000, 247.350000, 235.229850, 255.000000",
+  "BTTPresetUUID" : "9278F8D1-4C4D-467D-AAB9-1AE4CF0AFA50",
+  "BTTPresetContent" : [
+    {
+      "BTTAppBundleIdentifier" : "BT.G",
+      "BTTAppName" : "Global",
+      "BTTAppAutoInvertIcon" : 1,
+      "BTTAppSpecificSettings" : {
+        "BTTDisableGlobalTriggers" : false
+      },
+      "BTTTriggers" : [
+        {
+          "BTTLastUpdatedAt" : 1686890024.711338,
+          "BTTTriggerType" : 0,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 100,
+          "BTTPredefinedActionName" : "为全部打开的应用显示窗口切换器",
+          "BTTAdditionalActionData" : {
+            "BTTWindowSwitcherFontSize" : 12,
+            "BTTWindowSwitcherShowPopover" : 0,
+            "BTTWindowSwitcherShowThumbnail" : 1,
+            "BTTWindowSwitcherSort" : 0,
+            "BTTWindowSwitcherAppearance" : 0,
+            "BTTWindowSwitcherHeight" : 500,
+            "BTTWindowSwitcherSelectNextOnRepeat" : true,
+            "BTTWindowSwitcherOverrideDefaultShortcuts" : false,
+            "BTTWindowSwitcherFocus" : 0,
+            "BTTWindowSwitcherWidth" : 380,
+            "BTTWindowSwitcherExclude" : "",
+            "BTTWindowSwitcherMousePos" : 0,
+            "BTTWindowSwitcherExcludeWindowsFromOtherSpaces" : false,
+            "BTTWindowSwitcherItemHeight" : 30,
+            "BTTWindowSwitcherExcludeHiddenAndMinimizedWindows" : false,
+            "BTTWindowSwitcherExcludeSpecific" : false,
+            "BTTWindowSwitcherInitialFocus" : 0,
+            "BTTWindowSwitcherTriggerOnRelease" : false
+          },
+          "BTTAdditionalConfiguration" : "8388608",
+          "BTTKeyboardShortcutKeyboardType" : 3858,
+          "BTTUUID" : "3921943F-F13F-4237-8869-743A637FD57B",
+          "BTTTriggerOnDown" : 1,
+          "BTTLayoutIndependentChar" : "F1",
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTShortcutKeyCode" : 122,
+          "BTTShortcutModifierKeys" : 8388608,
+          "BTTOrder" : 1,
+          "BTTAutoAdaptToKeyboardLayout" : 0,
+          "BTTAdditionalActions" : [
+            {
+              "BTTLastUpdatedAt" : 1684749206.3330719,
+              "BTTTriggerType" : -1,
+              "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+              "BTTKeyboardShortcutKeyboardType" : 0,
+              "BTTUUID" : "1F03496C-AAE6-43A4-B9AE-358480249040",
+              "BTTEnabled" : 1,
+              "BTTEnabled2" : 1,
+              "BTTShortcutKeyCode" : -1,
+              "BTTShortcutModifierKeys" : -1,
+              "BTTOrder" : 7,
+              "BTTAutoAdaptToKeyboardLayout" : 0
+            }
+          ]
+        },
+        {
+          "BTTLastUpdatedAt" : 1666273533.7054009,
+          "BTTTriggerType" : 741,
+          "BTTTriggerTypeDescription" : "Standard Menu Bar Items Widget",
+          "BTTTriggerClass" : "BTTTriggerTypeNotchBar",
+          "BTTUUID" : "B537C1F1-3883-4C1C-9B65-5FFB57C80E9D",
+          "BTTNotes" : "This shows the standard menubar elements like File, Edit...",
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : -5,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTTriggerConfig" : {
+            "BTTNotchBarVisibilityNotchScreen" : 2,
+            "BTTTouchBarItemPlacement" : 1,
+            "BTTNotchBarVisibilityStandardScreen" : 2
+          }
+        },
+        {
+          "BTTLastUpdatedAt" : 1666273533.7093329,
+          "BTTTriggerType" : 699,
+          "BTTTriggerTypeDescription" : "Notch Bar Status Items Widget",
+          "BTTTriggerClass" : "BTTTriggerTypeNotchBar",
+          "BTTUUID" : "595D22FA-8F22-40D0-8440-620E11C6C6EA",
+          "BTTNotesInsteadOfDescription" : 1,
+          "BTTNotes" : "Mini version of the menubar status icons.",
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : -3,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTTriggerConfig" : {
+            "BTTNotchBarVisibilityNotchScreen" : 1,
+            "BTTNotchBarVisibilityStandardScreen" : -1,
+            "BTTTouchBarItemPlacement" : 5,
+            "BTTNotchBarWidgetVisibleStatusItems" : {
+              "showAll" : 0
+            }
+          }
+        },
+        {
+          "BTTLastUpdatedAt" : 1666273533.7094541,
+          "BTTTriggerType" : 743,
+          "BTTTriggerTypeDescription" : "Mimic System Status Icons",
+          "BTTTriggerClass" : "BTTTriggerTypeNotchBar",
+          "BTTUUID" : "03DC8733-6807-4565-A2BB-84FF60A223DF",
+          "BTTNotes" : "This tries to look like the original status icons",
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : -2,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTTriggerConfig" : {
+            "BTTNotchBarVisibilityNotchScreen" : 2,
+            "BTTNotchBarVisibilityStandardScreen" : 2,
+            "BTTTouchBarItemPlacement" : 2,
+            "BTTNotchBarWidgetVisibleStatusItems" : {
+              "showAll" : 0
+            },
+            "BTTNotchBarCSSClass" : "system-status-icons"
+          }
+        },
+        {
+          "BTTTouchBarButtonName" : "Widget Mode Test - Scroll Up\/Down to switch modes. Right click bar for more options.",
+          "BTTLastUpdatedAt" : 1666281424.8176131,
+          "BTTTriggerType" : 696,
+          "BTTTriggerTypeDescription" : "Notch Bar Button",
+          "BTTTriggerClass" : "BTTTriggerTypeNotchBar",
+          "BTTPredefinedActionType" : 5,
+          "BTTPredefinedActionName" : "Mission Control",
+          "BTTUUID" : "B39E201A-A96E-4D3D-9C26-1077F3DA4C7C",
+          "BTTNotes" : "You can delete this button, it's just an example.",
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 100,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTTriggerConfig" : {
+            "BTTNotchBarVisibilityNotchScreen" : 1,
+            "BTTTouchBarItemSFSymbolDefaultIcon" : "scribble.variable",
+            "BTTTouchBarItemPlacement" : 1,
+            "BTTTouchBarButtonName" : "Example Button (scroll up\/down to switch modes)",
+            "BTTTouchBarItemIconType" : 2,
+            "BTTNotchBarVisibilityStandardScreen" : 1,
+            "BTTTouchBarIconInvert" : 1,
+            "BTTTouchBarItemIconWidth" : 15,
+            "BTTTouchBarItemIconHeight" : 15
+          }
+        },
+        {
+          "BTTLastUpdatedAt" : 1666273533.709218,
+          "BTTTriggerType" : 742,
+          "BTTTriggerTypeDescription" : "Mini Menu Bar Items Widget",
+          "BTTTriggerClass" : "BTTTriggerTypeNotchBar",
+          "BTTUUID" : "3FC3D5BF-11E2-4E7E-8174-0CF31795AFB1",
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : -4,
+          "BTTMergeIntoTouchBarGroups" : 0,
+          "BTTTriggerConfig" : {
+            "BTTNotchBarVisibilityNotchScreen" : 1,
+            "BTTTouchBarItemPlacement" : 4,
+            "BTTNotchBarVisibilityStandardScreen" : -1
+          }
+        },
+        {
+          "BTTTouchBarButtonName" : "Default Items:",
+          "BTTLastUpdatedAt" : 1666273533.704448,
+          "BTTTriggerType" : 202,
+          "BTTTriggerTypeDescription" : "",
+          "BTTTriggerClass" : "BTTTriggerTypeNotchBar",
+          "BTTGenericActionConfig2" : "127.553696, 119.355743, 119.263702, 179.131959",
+          "BTTSeparatorFontColor" : "255.000000, 255.000000, 255.000000, 255.000000",
+          "BTTSeparatorBackgroundColorDark" : "127.553696, 119.355743, 119.263702, 179.131959",
+          "BTTSeparatorFontColorDark" : "255.000000, 255.000000, 255.000000, 255.000000",
+          "BTTSeparatorBackgroundColor" : "127.553696, 119.355743, 119.263702, 179.131959",
+          "BTTUUID" : "E43DABE1-2A3C-42EF-8C50-B234E4C8BA7C",
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : -6,
+          "BTTMergeIntoTouchBarGroups" : 0
+        },
+        {
+          "BTTLastUpdatedAt" : 1686841908.359592,
+          "BTTTriggerType" : 643,
+          "BTTTriggerTypeDescription" : "命名触发：执行 Shell 脚本\/任务: -",
+          "BTTTriggerClass" : "BTTTriggerTypeOtherTriggers",
+          "BTTPredefinedActionType" : 206,
+          "BTTPredefinedActionName" : "执行 Shell 脚本\/任务",
+          "BTTGenericActionConfig" : "yabai -m space --focus 1",
+          "BTTGenericActionConfig2" : "\/bin\/bash:::-c:::-:::",
+          "BTTShellTaskActionScript" : "yabai -m space --focus 1",
+          "BTTShellTaskActionConfig" : "\/bin\/bash:::-c:::-:::",
+          "BTTTriggerName" : "执行 Shell 脚本\/任务: -",
+          "BTTUUID" : "54E5EA3F-35E6-480E-8156-FAF789D3C2B0",
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1
+        },
+        {
+          "BTTLastUpdatedAt" : 1642067547.086278,
+          "BTTTriggerType" : -1,
+          "BTTTriggerClass" : "BTTTriggerTypeMagicMouse",
+          "BTTUUID" : "BEBCFA4D-B7F1-468E-9EB4-C03FDD5544C3",
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1
+        },
+        {
+          "BTTLastUpdatedAt" : 1686889619.926245,
+          "BTTTriggerType" : -1,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTKeyboardShortcutKeyboardType" : 0,
+          "BTTUUID" : "41A12ADB-DF3D-4E09-812F-1F7BA568F7F7",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTShortcutKeyCode" : -1,
+          "BTTShortcutModifierKeys" : -1,
+          "BTTOrder" : 32,
+          "BTTAutoAdaptToKeyboardLayout" : 0
+        },
+        {
+          "BTTTouchBarButtonName" : "User Defined Items:",
+          "BTTLastUpdatedAt" : 1666273533.7053339,
+          "BTTTriggerType" : 202,
+          "BTTTriggerTypeDescription" : "",
+          "BTTTriggerClass" : "BTTTriggerTypeNotchBar",
+          "BTTGenericActionConfig2" : "127.553696, 119.355743, 119.263702, 179.131959",
+          "BTTSeparatorFontColor" : "255.000000, 255.000000, 255.000000, 255.000000",
+          "BTTSeparatorBackgroundColorDark" : "127.553696, 119.355743, 119.263702, 179.131959",
+          "BTTSeparatorFontColorDark" : "255.000000, 255.000000, 255.000000, 255.000000",
+          "BTTSeparatorBackgroundColor" : "127.553696, 119.355743, 119.263702, 179.131959",
+          "BTTUUID" : "131DD68B-6E34-4C01-8F48-BAB08CBF5517",
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : -1,
+          "BTTMergeIntoTouchBarGroups" : 0
+        }
+      ]
+    },
+    {
+      "BTTAppBundleIdentifier" : "com.apple.finder",
+      "BTTAppName" : "Finder",
+      "BTTAppAutoInvertIcon" : 1,
+      "BTTTriggers" : [
+        {
+          "BTTLastUpdatedAt" : 1642067547.086278,
+          "BTTTriggerType" : -1,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTKeyboardShortcutKeyboardType" : 0,
+          "BTTUUID" : "553525EF-794F-4D60-B438-F6592AFB795B",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTShortcutKeyCode" : -1,
+          "BTTShortcutModifierKeys" : -1,
+          "BTTAutoAdaptToKeyboardLayout" : 0
+        }
+      ]
+    }
+  ],
+  "BTTPresetSnapAreas" : [
+
+  ]
+}

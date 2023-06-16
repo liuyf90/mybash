@@ -1,0 +1,10 @@
+{
+  "liuyf": {
+    "prefix": "liuyf",
+    "body": [
+        "author liuyf by ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}",
+        "content: ${1}"
+    ],
+    "description": "author description"
+  }
+}
